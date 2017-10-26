@@ -6,6 +6,10 @@ h1.header {
   font-size: 260%;
 }
 
+.error {
+  color: red;
+}
+
 body {
   padding: 15px;
   font-family: Verdana;
