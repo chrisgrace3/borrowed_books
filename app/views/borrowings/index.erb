@@ -2,6 +2,12 @@
 
 <% @borrowings.each do |borrowing|  %>
   <ul>
-    <li><%= borrowing.book_title %></li>
+    <li id="book-title"><%= borrowing.book_title %></li>
+    <li id="book-info"><%= "ISBN: #{borrowing.book_isbn} | Written by #{borrowing.book_author}" %></li>
+    <li id="borrower-info"><%= "Borrowed by #{borrowing.borrowed_by} on #{borrowing.borrowed_on.strftime("%B %d, %Y")}" %></li>
+    <li id='edit-link'><a href="">Edit</a> | <a href="">Remove</a></li>
   </ul>
 <% end %>
+<ul>
+  <li><a class="no-linky" href="borrowings/new"><input type="button" value="Lend out a book"></a></li>
+</ul>

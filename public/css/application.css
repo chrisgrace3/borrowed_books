@@ -13,18 +13,19 @@ nav {
 }
 
 h2 {
-  font-size: 130%;
+  font-size: 135%;
   font-weight: normal;
 }
 
 form {
   padding: 10px;
 }
+
 form input {
   margin-bottom: 10px;
 }
 
-a.header {
+a.no-linky {
   text-decoration: none;
   color: black;
 }
@@ -35,5 +36,13 @@ input#submit{
   border:none;
   font-size:1em;
   color:blue;
+}
+
+li#book-title {
+  font-size: 120%;
+}
+
+li#book-info, li#borrower-info, li#edit-link {
+  font-size: 85%;
 }
 
