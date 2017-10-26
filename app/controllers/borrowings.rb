@@ -1,6 +1,6 @@
 get '/borrowings' do
-  @borrowing = Borrowing.all
-  erb 'borrowings/index'
+  @borrowings = Borrowing.all
+  erb :'borrowings/index'
 end
 
 get '/borrowings/new' do

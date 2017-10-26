@@ -1,0 +1,7 @@
+<h2>The following books are being borrowed from you:</h2>
+
+<% @borrowings.each do |borrowing|  %>
+  <ul>
+    <li><%= borrowing.book_title %></li>
+  </ul>
+<% end %>
