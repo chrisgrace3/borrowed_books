@@ -1,6 +1,10 @@
 get '/borrowings' do
-  @borrowings = Borrowing.all
-  erb :'borrowings/index'
+  if logged_in?
+    @borrowings = Borrowing.select { |borrowing| borrowing.owner == current_user }
+    erb :'borrowings/index'
+  else
+    erb :'users/new'
+  end
 end
 
 get '/borrowings/new' do

@@ -1,0 +1,19 @@
+<h2>Submit this form to create a new account or <a href="/sessions/new">click here to log in</a></h2>
+
+<form action="/users" method="post">
+  <div>
+    <label>Email Address:</label>
+    <input type="email" name="user[email]" required>
+  </div>
+  <div>
+    <label>Username:</label>
+    <input type="text" name="user[username]" required>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" name="user[password]" required>
+  </div>
+  <div>
+    <input type="button" value="Create Account">
+  </div>
+</form>

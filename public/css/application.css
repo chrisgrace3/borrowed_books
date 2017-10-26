@@ -1,0 +1,39 @@
+ul {
+  list-style-type: none;
+}
+
+body {
+  padding: 15px;
+  font-family: Verdana;
+}
+
+nav {
+  float: right;
+  margin-right: 10px;
+}
+
+h2 {
+  font-size: 130%;
+  font-weight: normal;
+}
+
+form {
+  padding: 10px;
+}
+form input {
+  margin-bottom: 10px;
+}
+
+a.header {
+  text-decoration: none;
+  color: black;
+}
+
+input#submit{
+  text-decoration: underline;
+  background:none;
+  border:none;
+  font-size:1em;
+  color:blue;
+}
+

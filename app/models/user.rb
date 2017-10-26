@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   has_many :borrowings
 
-  validates :username, :email, presence: true
+  validates :username, :email, presence: true, uniqueness: true
   validate :validate_password
 
   def password

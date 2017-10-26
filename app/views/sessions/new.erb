@@ -1,0 +1,17 @@
+<% if @message %>
+  <p><%= "• #{@message}" %></p>
+<% end %>
+
+<form action="/sessions" method="post">
+  <div>
+    <label>Email Address:</label>
+    <input type="email" name="email" required>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" name="password" required>
+  </div>
+  <div>
+    <input type="submit" value="Log in">
+  </div>
+</form>
