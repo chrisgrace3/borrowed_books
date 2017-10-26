@@ -14,7 +14,7 @@ get '/borrowings/new' do
 end
 
 post '/borrowings' do
-  authenticate!
+  # authenticate!
   @borrowing = Borrowing.new(params[:borrowing])
 
   if @borrowing.save

@@ -1,4 +1,8 @@
-<h2>To add a book to your borrowed books, or fill out the form below or search by the book's title, author, or ISBN number.</h2>
+<h2>To add a book to your borrowed books, fill out the form below or search by the book's title, author, or ISBN number.</h2>
+
+<% if @errors %>
+  <p></p>
+<% end %>
 
 <form action="/borrowing" method="post">
   <div>
@@ -11,7 +15,7 @@
   </div>
   <div>
     <label>ISBN:</label>
-    <input type="text" name="borrowing[book_author]">
+    <input type="text" name="borrowing[book_isbn]">
   </div>
   <div>
     <input type="submit" value="Submit">

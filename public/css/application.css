@@ -2,6 +2,10 @@ ul {
   list-style-type: none;
 }
 
+h1.header {
+  font-size: 260%;
+}
+
 body {
   padding: 15px;
   font-family: Verdana;
