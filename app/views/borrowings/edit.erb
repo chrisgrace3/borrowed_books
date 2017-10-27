@@ -1,4 +1,4 @@
-<h2>To add to your borrowed books, fill out the form below <br>OR search by the book's title, author, or ISBN number.</h2>
+<h2>Edit book details:</h2>
 
 <% if @errors %>
   <% @errors.each do |error| %>
@@ -6,7 +6,8 @@
   <% end %>
 <% end %>
 
-<form action="/borrowings" method="post">
+<form action="/borrowings/<%= @borrowing.id %>" method="post">
+<input type="hidden" name="_method" value="PUT">
   <div>
     <label>Book Title:</label>
     <input type="text" name="borrowing[book_title]">

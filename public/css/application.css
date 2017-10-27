@@ -58,3 +58,7 @@ li#book-info, li#borrower-info, li#edit-link {
   font-size: 85%;
 }
 
+#delete-button {
+  margin-left: 10px;
+}
+

@@ -54,7 +54,7 @@ end
 delete '/borrowings/:id' do
   authenticate!
   @borrowing = Borrowing.find_by(id: params[:id])
-  authorize!(@borrowing.user)
+  authorize!(@borrowing.owner)
   @borrowing.destroy
   redirect '/borrowings'
 end
