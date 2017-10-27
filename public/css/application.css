@@ -13,11 +13,15 @@ h1.header {
 body {
   padding: 15px;
   font-family: Verdana;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
 }
 
 nav {
-  float: right;
-  margin-right: 10px;
+  position: fixed;
+  right: 20px;
+  top: 0;
 }
 
 h2 {
