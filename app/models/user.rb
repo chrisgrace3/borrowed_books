@@ -3,7 +3,7 @@ require 'bcrypt'
 class User < ApplicationRecord
   include BCrypt
 
-  has_many :borrowings
+  has_many :borrowings, foreign_key: :owner_id
 
   validates :username, :email, presence: true, uniqueness: true
   validate :validate_password
