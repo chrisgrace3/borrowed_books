@@ -25,6 +25,9 @@
     <li><form method="post" action="/sessions">
       Hello, <a href="/"><%= current_user.username %></a>! |<input type="hidden" name="_method" value="delete" />
       <input class="logout-button" type="submit" id="submit" value="logout" /></form>
+      <ul>
+  <li><a class="no-linky" href="borrowings/new"><input type="button" value="Lend out a book"></a></li>
+</ul>
   <% else %>
     <li><a href="/sessions/new">log in</a> | <a href="/users/new">register</a></li>
   <% end %>
