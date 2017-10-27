@@ -23,8 +23,8 @@
     <ul>
   <% if logged_in? %>
     <li><form method="post" action="/sessions">
-      Hello, <%= current_user.username %>! |<input type="hidden" name="_method" value="delete" />
-      <input class="logout-button" type="submit" id="submit" value="logout" />
+      Hello, <a href="/"><%= current_user.username %></a>! |<input type="hidden" name="_method" value="delete" />
+      <input class="logout-button" type="submit" id="submit" value="logout" /></form>
   <% else %>
     <li><a href="/sessions/new">log in</a> | <a href="/users/new">register</a></li>
   <% end %>

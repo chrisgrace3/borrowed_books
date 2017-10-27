@@ -14,12 +14,12 @@ get '/borrowings/new' do
 end
 
 post '/borrowings' do
-  # authenticate!
+  authenticate!
   @borrowing = Borrowing.new(params[:borrowing])
-
+  @borrowing.owner = current_user
   if @borrowing.save
     current_user.borrowings << @borrowing
-    redirect '/borrowings'
+    redirect '/'
   else
     @errors = @borrowing.errors.full_messages
     erb :"borrowings/new"
