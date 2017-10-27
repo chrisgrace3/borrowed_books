@@ -1,6 +1,6 @@
 get '/borrowings' do
   if logged_in?
-    @borrowings = Borrowing.select { |borrowing| borrowing.owner == current_user }
+    @borrowings = current_user.borrowings.order(borrowed_on: :DESC)
     erb :'borrowings/index'
   else
     erb :'users/new'
