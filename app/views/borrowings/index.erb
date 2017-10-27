@@ -1,15 +1,17 @@
 <h2>The following books are being borrowed from you:</h2>
 
 <% @borrowings.each do |borrowing|  %>
-  <ul>
-    <li id="book-title"><a href=""><%= borrowing.book_title %></a></li>
-    <li id="book-info"><%= "ISBN: #{borrowing.book_isbn} | Written by #{borrowing.book_author}" %></li>
-    <li id="borrower-info"><%= "Borrowed by #{borrowing.borrowed_by} on #{borrowing.borrowed_on.strftime("%B %d, %Y")}" %></li>
-  </ul>
-  <form id="delete-button" method="POST" action="/borrowings/<%= borrowing.id %>">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Return">
-  </form>
+  <div class="box">
+    <ul>
+      <li id="book-title"><a href=""><%= borrowing.book_title %></a></li>
+      <li id="book-info"><%= "ISBN: #{borrowing.book_isbn} | Written by #{borrowing.book_author}" %></li><br>
+      <li id="borrower-info"><%= "Borrowed by #{borrowing.borrowed_by} on #{borrowing.borrowed_on.strftime("%B %d, %Y")}" %></li>
+    </ul>
+    <form id="delete-button" method="POST" action="/borrowings/<%= borrowing.id %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Return">
+    </form>
+  </div>
 <% end %>
 
 

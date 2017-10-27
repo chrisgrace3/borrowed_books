@@ -68,3 +68,10 @@ img {
   width: 50%;
 }
 
+div.box {
+  border: 3px solid #4A777A;
+  margin-left: 0;
+  width: 60%;
+  margin-bottom: 5px;
+}
+

@@ -1,14 +1,19 @@
-<h2>To add to your borrowed books, fill out the form below <br>OR search by the book's title, author, or ISBN number.</h2>
+<h2>What book are you lending out?</h2>
 
 <% if @errors %>
   <% @errors.each do |error| %>
     <p class="error"><%= error %></p>
   <% end %>
 <% end %>
-
-<form><input type="text" name="q"> </input><input type="submit" value="Search"></form>
+<div class="box">
+<form>
+  <p>Search by book's title, author, or ISBN number:</p>
+  <input type="text" name="q"> </input><input type="submit" value="Search">
+</form>
 
 <form action="/borrowings" method="post">
+  - OR -
+  <p>Manually enter book info:</p>
   <div>
     <label>Book Title:</label>
     <input type="text" name="borrowing[book_title]">
@@ -33,4 +38,5 @@
     <input type="submit" value="Submit">
   </div>
 </form>
+</div>
 
