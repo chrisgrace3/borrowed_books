@@ -63,3 +63,8 @@ li#book-info, li#borrower-info, li#edit-link {
   margin-left: 10px;
 }
 
+img {
+  padding-left: 25%;
+  width: 50%;
+}
+
