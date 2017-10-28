@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :borrowings, foreign_key: :owner_id
 
   validates :username, :email, presence: true, uniqueness: true
-  validate :validate_password
+  validates :password, :presence => true
 
   def password
     @password ||= Password.new(hashed_password)

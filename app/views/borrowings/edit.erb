@@ -7,10 +7,10 @@
 <% end %>
 
 <form action="/borrowings/<%= @borrowing.id %>" method="post">
-<input type="hidden" name="_method" value="PUT">
+<input type="hidden" name="_method" value="PUT" >
   <div>
     <label>Book Title:</label>
-    <input type="text" name="borrowing[book_title]">
+    <input type="text" name="borrowing[book_title]" autofocus>
   </div>
   <div>
     <label>Author:</label>
