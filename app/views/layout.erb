@@ -33,6 +33,13 @@
   <% end %>
     </ul>
   </nav>
+  <% if @messages %>
+  <ul>
+    <% @messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
   <%= yield %>
   <% if !logged_in? %>
     <img style="width: 400px; padding-left: 25%; ;" src="../../media/IMG_0664.png">
